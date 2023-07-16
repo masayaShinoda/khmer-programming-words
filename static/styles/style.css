@@ -94,7 +94,6 @@ a:visited {
 }
 
 body {
-	min-height: 300vh;
 	background-color: var(--clr_light);
 	color: var(--clr_dark);
 }
@@ -111,6 +110,12 @@ code {
 	font-weight: 400;
 	color: var(--clr_dark);
 	background-color: var(--clr_grey_shade_e);
+}
+@media (prefers-color-scheme: dark) {
+	code {
+		color: var(--clr_light);
+		background-color: var(--clr_grey_shade_a);
+	}
 }
 
 .section_top {

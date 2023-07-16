@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import SEOHead from '$lib/SEOHead.svelte';
 	import SectionTop from '$lib/SectionTop.svelte';
 	import Hero from '$lib/Hero.svelte';
+	import type { PageData } from './$types';
 	// import { onMount } from 'svelte';
 
 	export let data: PageData;
@@ -62,6 +63,7 @@
 	}
 </script>
 
+<SEOHead />
 <SectionTop />
 <Hero />
 
