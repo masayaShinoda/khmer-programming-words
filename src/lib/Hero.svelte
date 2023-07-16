@@ -5,8 +5,8 @@
 	<div>
 		<h1>ពាក្យបច្ចេកទេសបកប្រែជាភាសាខ្មែរ</h1>
 		<span lang="en"
-			>An opinionated collection of technical words commonly used in programming, translated into
-			Khmer.</span
+			>An <span style="font-weight: 600;">opinionated</span> collection of technical words commonly used
+			in programming, translated into Khmer.</span
 		>
 	</div>
 </section>

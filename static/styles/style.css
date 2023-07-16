@@ -7,6 +7,7 @@ html {
 	/* 16px */
 	font-size: 100%;
 	line-height: 1.75;
+	scroll-padding-top: 5rem;
 
 	--clr_dark: #141414;
 	--clr_dark_shade_a: #212121;
@@ -93,7 +94,7 @@ a:visited {
 }
 
 body {
-	min-height: 200vh;
+	min-height: 300vh;
 	background-color: var(--clr_light);
 	color: var(--clr_dark);
 }
@@ -103,6 +104,13 @@ body {
 		background-color: var(--clr_dark);
 		color: var(--clr_light);
 	}
+}
+
+code {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 400;
+	color: var(--clr_dark);
+	background-color: var(--clr_grey_shade_e);
 }
 
 .section_top {
@@ -195,13 +203,20 @@ body {
 }
 
 .section_main dt {
+	line-height: 1.24;
+}
+.section_main dd {
+	line-height: 1.5;
+}
+
+.section_main dt {
 	font-size: 1.5rem;
 	font-weight: 600;
-	margin: 3.052rem 0 1.38rem 0;
+	margin: 3.052rem 0 1rem 0;
 }
 
 .section_main dd {
-	margin-bottom: 1rem;
+	margin-bottom: 1.25rem;
 	font-size: 1.25rem;
 	color: var(--clr_grey_shade_a);
 }

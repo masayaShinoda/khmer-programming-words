@@ -2,39 +2,64 @@
 	import type { PageData } from './$types';
 	import SectionTop from '$lib/SectionTop.svelte';
 	import Hero from '$lib/Hero.svelte';
+	// import { onMount } from 'svelte';
 
-	export function convertMarkdownToHtml(markdown: string) {
-		const lines = markdown.split(/\r?\n/);
+	export let data: PageData;
 
-		const lines_filtered = lines.filter((line) => line.length > 1);
-		console.log(lines_filtered);
+	export function convertMarkdownToHtml(markdown: string, expectedReturn: 'html' | 'array') {
+		const lines: string[] = markdown.split(/\r?\n/);
+
+		const lines_filtered: string[] = lines.filter((line) => line.length > 1);
+		// console.log(lines_filtered);
 
 		let html = '';
 		let currentTerm = '';
+
+		let currentChar = '';
 
 		for (let i = 0; i < lines_filtered.length; i++) {
 			const line = lines_filtered[i];
 
 			if (line.startsWith(':')) {
 				if (currentTerm) {
-					html += `<dd>${line.slice(1)}</dd>\n`;
+					const regex = /`([^`]*)`/g; /* for code blocks */
+
+					html += `<dd>${line.slice(1).replace(regex, '<code>$1</code>')}</dd>\n`;
 				}
 			} else {
 				// if (currentTerm) {
 				// 	html += `</dd>\n`;
 				// }
 				currentTerm = line;
-				html += `<dt>${currentTerm}</dt>`;
+
+				if (currentTerm[0].toUpperCase() === currentChar) {
+					html += `<dt>${currentTerm}</dt>`;
+				} else {
+					currentChar = currentTerm[0].toUpperCase();
+					html += `<dt id='${currentChar}'>${currentTerm}</dt>`;
+				}
 			}
 		}
 		// if (currentTerm) {
 		// 	html += `</dd>\n`;
 		// }
-
-		return html;
+		if (expectedReturn === 'html') {
+			return html;
+		} else if (expectedReturn === 'array') {
+			return lines_filtered;
+		}
 	}
 
-	export let data: PageData;
+	let content_array: string[] = convertMarkdownToHtml(data.content, 'array');
+	let first_char_array = content_array.map((item) => {
+		if (item[0] !== ':') {
+			return item[0];
+		} else return '';
+	});
+
+	export function removeDuplicates(arr: string[]) {
+		return [...new Set(arr)];
+	}
 </script>
 
 <SectionTop />
@@ -42,13 +67,19 @@
 
 <section class="section_alpha_nav">
 	<nav id="alpha_nav">
-		<a href="#a">A</a>
+		{#each removeDuplicates(first_char_array) as item}
+			{#if item.length === 1}
+				<a href={`#${item}`}>
+					{item}
+				</a>
+			{/if}
+		{/each}
 	</nav>
-	<noscript>JavaScript is required to use this navigation feature.</noscript>
+	<!-- <noscript>JavaScript is required to use this navigation feature.</noscript> -->
 </section>
 
 <section class="section_main">
 	<dl id="definition_list">
-		{@html convertMarkdownToHtml(data.content)}
+		{@html convertMarkdownToHtml(data.content, 'html')}
 	</dl>
 </section>
