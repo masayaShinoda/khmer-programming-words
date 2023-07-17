@@ -17,7 +17,7 @@
 		property="og:description"
 		content="បណ្តុំពាក្យបច្ចេកទេសក្នុងការសរសេរកូដបកប្រែជាភាសាខ្មែរ។"
 	/>
-	<meta property="og:image" content="/banner-01.jpg" />
+	<meta property="og:image" content="https://khmer-programming-words.vercel.app/banner-01.jpg" />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
@@ -26,7 +26,10 @@
 		property="twitter:description"
 		content="បណ្តុំពាក្យបច្ចេកទេសក្នុងការសរសេរកូដបកប្រែជាភាសាខ្មែរ។"
 	/>
-	<meta property="twitter:image" content="/banner-01.jpg" />
+	<meta
+		property="twitter:image"
+		content="https://khmer-programming-words.vercel.app/banner-01.jpg"
+	/>
 
 	<!-- favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
