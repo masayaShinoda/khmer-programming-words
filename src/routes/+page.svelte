@@ -3,56 +3,12 @@
 	import SectionTop from '$lib/SectionTop.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import type { PageData } from './$types';
-	// import { onMount } from 'svelte';
 
 	export let data: PageData;
 
-	export function convertMarkdownToHtml(markdown: string, expectedReturn: 'html' | 'array') {
-		const lines: string[] = markdown.split(/\r?\n/);
+	let dictionary_keys = Object.keys(data.content);
 
-		const lines_filtered: string[] = lines.filter((line) => line.length > 1);
-		// console.log(lines_filtered);
-
-		let html = '';
-		let currentTerm = '';
-
-		let currentChar = '';
-
-		for (let i = 0; i < lines_filtered.length; i++) {
-			const line = lines_filtered[i];
-
-			if (line.startsWith(':')) {
-				if (currentTerm) {
-					const regex = /`([^`]*)`/g; /* for code blocks */
-
-					html += `<dd>${line.slice(1).replace(regex, '<code>$1</code>')}</dd>\n`;
-				}
-			} else {
-				// if (currentTerm) {
-				// 	html += `</dd>\n`;
-				// }
-				currentTerm = line;
-
-				if (currentTerm[0].toUpperCase() === currentChar) {
-					html += `<dt>${currentTerm}</dt>`;
-				} else {
-					currentChar = currentTerm[0].toUpperCase();
-					html += `<dt id='${currentChar}'>${currentTerm}</dt>`;
-				}
-			}
-		}
-		// if (currentTerm) {
-		// 	html += `</dd>\n`;
-		// }
-		if (expectedReturn === 'html') {
-			return html;
-		} else if (expectedReturn === 'array') {
-			return lines_filtered;
-		}
-	}
-
-	let content_array: string[] = convertMarkdownToHtml(data.content, 'array');
-	let first_char_array = content_array.map((item) => {
+	let first_char_array = dictionary_keys.map((item) => {
 		if (item[0] !== ':') {
 			return item[0];
 		} else return '';
@@ -82,6 +38,11 @@
 
 <section class="section_main">
 	<dl id="definition_list">
-		{@html convertMarkdownToHtml(data.content, 'html')}
+		{#each dictionary_keys as item}
+			<dt>{item}</dt>
+			{#each data.content[`${item}`] as definition}
+				<dd>{definition}</dd>
+			{/each}
+		{/each}
 	</dl>
 </section>
