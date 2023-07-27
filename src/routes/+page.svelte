@@ -6,7 +6,7 @@
 
 	type DictionaryKey = keyof typeof dictionary;
 
-	const dictionary_keys = Object.keys(dictionary) as DictionaryKey[];
+	const dictionary_keys = Array.from(Object.keys(dictionary)).sort() as DictionaryKey[];
 
 	const first_char_array = dictionary_keys.map((item) => {
 		if (item[0] !== ':') {
