@@ -65,6 +65,9 @@
 		{/each}
 	</dl>
 </section>
+<footer class="section_footer">
+	<a href="https://masayashida.com">masayashida.com</a>
+</footer>
 
 <style>
 	.section_alpha_nav {
@@ -163,5 +166,15 @@
 		.heading_alphabet {
 			color: var(--clr_grey_shade_b);
 		}
+	}
+	.section_footer {
+		width: 100%;
+		/* max-width: min(40em, 95%); */
+		margin: 2.5rem auto 3.5rem auto;
+		padding: 1.5rem 0;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		/* outline: 1px solid red; */
 	}
 </style>
