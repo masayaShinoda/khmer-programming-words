@@ -2,6 +2,7 @@
 	import SEOHead from '$lib/SEOHead.svelte';
 	import SectionTop from '$lib/SectionTop.svelte';
 	import Hero from '$lib/Hero.svelte';
+	import AlphabetNav from '$lib/AlphabetNav.svelte';
 	import { dictionary } from '$lib/content/dictionary';
 
 	type DictionaryKey = keyof typeof dictionary;
@@ -35,20 +36,7 @@
 <SEOHead />
 <SectionTop />
 <Hero />
-
-<section class="section_alpha_nav">
-	<nav id="alpha_nav">
-		{#each removeDuplicates(first_char_array) as item}
-			{#if item.length === 1}
-				<a href={`#${item}`}>
-					{item}
-				</a>
-			{/if}
-		{/each}
-	</nav>
-	<!-- <noscript>JavaScript is required to use this navigation feature.</noscript> -->
-</section>
-
+<AlphabetNav alphabet_array={removeDuplicates(first_char_array)} />
 <section class="section_main">
 	<dl id="definition_list">
 		{#each dictionary_keys as item}
@@ -70,84 +58,10 @@
 </footer>
 
 <style>
-	.section_alpha_nav {
-		width: min(40em, 95%);
-		max-width: min(40em, 95%);
-		display: flex;
-		justify-content: center;
-		margin: 0 auto;
-		padding: 1.5rem 0;
-		background-color: rgba(0, 0, 0, 0);
-		-webkit-backdrop-filter: blur(0.325rem);
-		backdrop-filter: blur(0.325rem);
-		border-top: 2px solid;
-		border-bottom: 2px solid;
-		border-color: var(--clr_grey_shade_e);
-		user-select: none;
-
-		font-size: 1.25rem;
-
-		position: -webkit-sticky;
-		/* Safari */
-		position: sticky;
-		top: 0;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.section_alpha_nav {
-			border-top-color: var(--clr_dark_shade_a);
-			border-bottom-color: var(--clr_dark_shade_a);
-		}
-	}
-
-	.section_alpha_nav a {
-		text-decoration: none;
-		font-size: 1.5rem;
-	}
-
-	.section_alpha_nav a:not(:last-of-type):not(:only-child) {
-		margin-right: 0.5rem;
-	}
-
-	/* mobile dictionary nav */
-	@media screen and (max-width: 40em) {
-		.section_alpha_nav {
-			flex-direction: column;
-			position: sticky;
-			right: 0;
-			top: 0;
-			padding: 0 .625rem;
-			margin: auto 0 auto auto;
-			width: auto;
-			height: 100dvh;
-			max-width: 10vw;
-			border: none;
-			background: none;
-			backdrop-filter: none;
-			-webkit-backdrop-filter: none;
-			float: right;
-			/* outline: 1px solid red; */
-		}
-		.section_alpha_nav nav {
-			display: inline-flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-		.section_alpha_nav a {
-			margin-bottom: 1rem;
-			font-size: var(--type_scale_4);
-		}
-		.section_alpha_nav a:not(:last-of-type):not(:only-child) {
-			margin: 0 0 1rem 0;
-			/* outline: 1px solid green; */
-		}
-	}
-
 	.section_main {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: flex-start; */
 		width: 100%;
 		max-width: min(48em, 95%);
 		margin: 3.5rem auto;
@@ -158,28 +72,25 @@
 	}
 	@media screen and (max-width: 40em) {
 		.section_main {
-			line-break: anywhere;
-			max-width: 87.5%;
-			margin-right: 8.75%;
+			/* line-break: anywhere; */
+			max-width: 100%;
+			/* max-width: calc(100% - 4rem); */
+			margin: 0 auto;
+			/* padding: 0 2rem 0 2rem; */
 			/* outline: 1px solid red; */
 		}
 	}
 
+
 	.section_main dt {
 		line-height: 1.24;
-	}
-
-	.section_main dd {
-		line-height: 1.5;
-	}
-
-	.section_main dt {
 		font-size: 1.5rem;
 		font-weight: 600;
 		margin: 1rem 0;
 	}
-
+	
 	.section_main dd {
+		line-height: 1.5;
 		margin-bottom: 1.25rem;
 		font-size: 1.25rem;
 		color: var(--clr_grey_shade_a);
@@ -206,6 +117,17 @@
 			color: var(--clr_grey_shade_b);
 		}
 	}
+
+	/* for mobile screen, add padding to dt, dd, and alphabet headings */
+	@media screen and (max-width: 40em) {
+		.heading_alphabet,
+		.section_main dt,
+		.section_main dd {
+			padding: 0 2rem 0 1rem;
+		}
+	}
+	
+
 	.section_footer {
 		width: 100%;
 		/* max-width: min(40em, 95%); */
