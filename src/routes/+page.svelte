@@ -83,6 +83,7 @@
 		border-top: 2px solid;
 		border-bottom: 2px solid;
 		border-color: var(--clr_grey_shade_e);
+		user-select: none;
 
 		font-size: 1.25rem;
 
@@ -108,6 +109,41 @@
 		margin-right: 0.5rem;
 	}
 
+	/* mobile dictionary nav */
+	@media screen and (max-width: 40em) {
+		.section_alpha_nav {
+			flex-direction: column;
+			position: sticky;
+			right: 0;
+			top: 0;
+			padding: 0 .625rem;
+			margin: auto 0 auto auto;
+			width: auto;
+			height: 100dvh;
+			max-width: 10vw;
+			border: none;
+			background: none;
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			float: right;
+			/* outline: 1px solid red; */
+		}
+		.section_alpha_nav nav {
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.section_alpha_nav a {
+			margin-bottom: 1rem;
+			font-size: var(--type_scale_4);
+		}
+		.section_alpha_nav a:not(:last-of-type):not(:only-child) {
+			margin: 0 0 1rem 0;
+			/* outline: 1px solid green; */
+		}
+	}
+
 	.section_main {
 		display: flex;
 		flex-direction: column;
@@ -123,6 +159,9 @@
 	@media screen and (max-width: 40em) {
 		.section_main {
 			line-break: anywhere;
+			max-width: 87.5%;
+			margin-right: 8.75%;
+			/* outline: 1px solid red; */
 		}
 	}
 
