@@ -81,14 +81,13 @@
 		}
 	}
 
-
 	.section_main dt {
 		line-height: 1.24;
 		font-size: 1.5rem;
 		font-weight: 600;
 		margin: 1rem 0;
 	}
-	
+
 	.section_main dd {
 		line-height: 1.5;
 		margin-bottom: 1.25rem;
@@ -125,8 +124,16 @@
 		.section_main dd {
 			padding: 0 2rem 0 1rem;
 		}
+
+		@supports (-moz-appearance: none) {
+			/* firefox specific khmer word wrap fix */
+			.heading_alphabet,
+			.section_main dt,
+			.section_main dd {
+				word-break: break-all;
+			}
+		}
 	}
-	
 
 	.section_footer {
 		width: 100%;
