@@ -126,6 +126,26 @@ export const dictionary = {
   "Read File":[],
   "Write File":[],
   "Upload":[],
-  "Download":[]
+  "Download":[],
+  "UDP Connection":[],
+  "TCP Connection":[],
+  "Connection Pool":[],
+  "Persistence Connection":[],
+  "Session":[],
+  "JSON":[],
+  "JWT Token":[],
+  "MessagePack":[],
+  "Microservice":[],
+  "Monolithic":[],
+  "WIFI":[],
+  "Access Point (AP)":[],
+  "Authorization":[],
+  "Authentication":[],
+  "Accounting":[],
+  "AAA - (Authentication-Authorization-Accounting":[],
+  "LDAP":[],
+  "WAMP":[],
+  "Apache Foundation":[],
+  "UUID":[]
   
 }
