@@ -19,7 +19,7 @@
 				<dt>{item}</dt>
 			{/if}
 			{#each dictionary[item] as definition}
-				<dd>{definition}</dd>
+				<dd>{@html definition}</dd>
 			{/each}
 		{/each}
 	</dl>
@@ -51,15 +51,15 @@
 
 	.section_main dt {
 		line-height: 1.24;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		font-weight: 600;
-		margin: 1rem 0;
+		margin: 2rem 0 1rem 0;
 	}
 
 	.section_main dd {
 		line-height: 1.5;
-		margin-bottom: 1.25rem;
-		font-size: 1.25rem;
+		margin-bottom: 1rem;
+		font-size: 1.125rem;
 		color: var(--clr_grey_shade_a);
 	}
 
@@ -83,6 +83,11 @@
 		.heading_alphabet {
 			color: var(--clr_grey_shade_b);
 		}
+	}
+
+	.heading_alphabet + dt {
+		margin-top: 1rem;
+		/* outline: 1px solid red; */
 	}
 
 	/* for mobile screen, add padding to dt, dd, and alphabet headings */

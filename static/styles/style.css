@@ -132,6 +132,7 @@ code {
 	font-weight: 400;
 	color: var(--clr_dark);
 	background-color: var(--clr_grey_shade_e);
+	border-radius: .125rem;
 }
 
 @media (prefers-color-scheme: dark) {
