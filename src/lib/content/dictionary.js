@@ -234,10 +234,16 @@ export const dictionary = {
   "Version Control": [],
   "Byte": [],
   "Bit": [],
-  "Lazy load": [],
+  "Lazy Load": [],
   "Package Data": [],
   "Firewall": [],
-  "DDoS": []
-
-
+  "DDoS": [],
+  "DevOps Engineer": [],
+  "Test Pipeline":[],
+  "Automation Tool":[],
+  "Docker":[],
+  "Cloud":[],
+  "High Work Load": [],
+  "Performance": [],
+  "Access": []
 }
