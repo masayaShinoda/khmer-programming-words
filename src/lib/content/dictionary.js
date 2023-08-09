@@ -258,5 +258,11 @@ export const dictionary = {
   "Cloud":[],
   "High Work Load": [],
   "Performance": [],
-  "Access": []
+  "Access": [],
+  "Internet Service Provider(ISP)":[],
+  "LEFT JOIN": [],
+  "RIGHT JOIN": [],
+  "OUTER JOIN": [],
+  "INNER JOIN":[],
+  "Bandwidth": []
 }
