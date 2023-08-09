@@ -80,8 +80,8 @@
 			justify-content: center;
 		}
 		.section_alpha_nav a {
-			margin-bottom: 1rem;
-			font-size: var(--type_scale_4);
+			margin-bottom: .875rem;
+			font-size: var(--type_scale_3);
 		}
 		.section_alpha_nav a:not(:last-of-type):not(:only-child) {
 			margin: 0 0 1rem 0;
