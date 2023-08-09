@@ -4,7 +4,6 @@
 html {
 	font-family: 'Noto Sans Khmer', sans-serif;
 	font-weight: 400;
-	/* 16px */
 	font-size: var(--type_scale_1);
 	line-height: 1.75;
 	scroll-padding-top: 5rem;
@@ -31,7 +30,7 @@ html {
 	--type_scale_4: 1.953rem;
 	--type_scale_3: 1.563rem;
 	--type_scale_2: 1.25rem;
-	--type_scale_1: 1rem;
+	--type_scale_1: 1.125rem;
 }
 @media screen and (max-width: 40em) {
 	html {
