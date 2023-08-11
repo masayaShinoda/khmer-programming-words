@@ -264,5 +264,9 @@ export const dictionary = {
   "RIGHT JOIN": [],
   "OUTER JOIN": [],
   "INNER JOIN":[],
-  "Bandwidth": []
+  "Bandwidth": [],
+  "Epoch Time": [],
+  "Unix time": [],
+  "Documentation": [],
+  "User Manual": []
 }
