@@ -268,5 +268,8 @@ export const dictionary = {
   "Epoch Time": [],
   "Unix time": [],
   "Documentation": [],
-  "User Manual": []
+  "User Manual": [],
+  "DROP Database":[],
+  "Delete Table":[],
+  "Truncate Table":[]
 }
