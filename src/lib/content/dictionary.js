@@ -271,5 +271,9 @@ export const dictionary = {
   "User Manual": [],
   "DROP Database":[],
   "Delete Table":[],
-  "Truncate Table":[]
+  "Truncate Table":[],
+  "Search Engine Optimization(SEO)": [],
+  "Search Engine": [],
+  "Message Broker": [],
+  "Message Queue": []
 }
