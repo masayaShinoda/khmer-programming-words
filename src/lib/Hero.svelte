@@ -43,6 +43,9 @@
 		/* outline: 1px solid red; */
 	}
 
+	.section_hero h1 {
+		font-size: calc(var(--type_scale_6) * 0.875);
+	}
 	@media screen and (max-width: 32em) {
 		.section_hero h1 {
 			font-size: var(--type_scale_5);
