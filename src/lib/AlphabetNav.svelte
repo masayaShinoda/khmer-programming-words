@@ -17,12 +17,12 @@
 
 <style>
 	.section_alpha_nav {
-		width: min(40em, 95%);
-		max-width: min(40em, 95%);
+		width: min(64em, 100%);
+		max-width: min(64em, 100%);
 		display: flex;
 		justify-content: center;
 		margin: 0 auto;
-		padding: 1.5rem 0;
+		padding: 1rem 0;
 		background-color: rgba(0, 0, 0, 0);
 		-webkit-backdrop-filter: blur(0.325rem);
 		backdrop-filter: blur(0.325rem);
@@ -30,8 +30,6 @@
 		border-bottom: 2px solid;
 		border-color: var(--clr_grey_shade_e);
 		user-select: none;
-
-		font-size: 1.25rem;
 
 		position: -webkit-sticky;
 		/* Safari */
@@ -48,7 +46,7 @@
 
 	.section_alpha_nav a {
 		text-decoration: none;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 
 	.section_alpha_nav a:not(:last-of-type):not(:only-child) {
