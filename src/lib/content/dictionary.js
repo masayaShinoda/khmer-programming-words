@@ -282,5 +282,8 @@ export const dictionary = {
   "Message Queue": [],
   "Static Type": [],
   "Functional Programming Language":[],
-  "Strong Type":[]
+  "Strong Type":[],
+  "B-tree":[],
+  "Database Indexing":[],
+  "HTTP Status Code": []
 }
