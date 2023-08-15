@@ -279,5 +279,8 @@ export const dictionary = {
   "Search Engine Optimization(SEO)": [],
   "Search Engine": [],
   "Message Broker": [],
-  "Message Queue": []
+  "Message Queue": [],
+  "Static Type": [],
+  "Functional Programming Language":[],
+  "Strong Type":[]
 }
