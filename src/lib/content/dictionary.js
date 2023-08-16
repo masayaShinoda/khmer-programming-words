@@ -285,5 +285,8 @@ export const dictionary = {
   "Strong Type":[],
   "B-tree":[],
   "Database Indexing":[],
-  "HTTP Status Code": []
+  "HTTP Status Code": [],
+  "Lazy Loader": [],
+  "Repository": [],
+  "Kernel": []
 }
