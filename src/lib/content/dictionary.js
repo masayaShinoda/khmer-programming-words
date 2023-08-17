@@ -288,5 +288,10 @@ export const dictionary = {
   "HTTP Status Code": [],
   "Lazy Loader": [],
   "Repository": [],
-  "Kernel": []
+  "Kernel": [],
+  "Code Editor": [],
+  "Unit Test": [],
+  "Black Box Tester": [],
+  "Gray Box Tester": [],
+  "White Box Tester": []
 }
