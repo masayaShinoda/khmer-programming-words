@@ -293,5 +293,9 @@ export const dictionary = {
   "Unit Test": [],
   "Black Box Tester": [],
   "Gray Box Tester": [],
-  "White Box Tester": []
+  "White Box Tester": [],
+  "Database Replication": [],
+  "Load Balance": [],
+  "Virtual Private Network(VPN)": []
+  
 }
