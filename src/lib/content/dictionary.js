@@ -296,6 +296,9 @@ export const dictionary = {
   "White Box Tester": [],
   "Database Replication": [],
   "Load Balance": [],
-  "Virtual Private Network(VPN)": []
+  "Virtual Private Network(VPN)": [],
+  "GraphQL": [],
+  "Apache Hadoop": [],
+  "File System": []
   
 }
