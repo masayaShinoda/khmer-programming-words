@@ -299,6 +299,9 @@ export const dictionary = {
   "Virtual Private Network(VPN)": [],
   "GraphQL": [],
   "Apache Hadoop": [],
-  "File System": []
+  "File System": [],
+  "BSON": [],
+  "Stateless": [],
+  "Statefull": []
   
 }
