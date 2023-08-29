@@ -1,8 +1,9 @@
 @import './reset.css';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khmer&display=swap');
 
 html {
-	font-family: 'Noto Sans Khmer', sans-serif;
+	font-family: 'Khmer', sans-serif;
 	font-weight: 400;
 	font-size: var(--type_scale_1);
 	line-height: 1.75;
