@@ -14,4 +14,4 @@ An opinionated collection of technical words commonly used in programming, trans
   ```
 សូមបង្កើត Pull Request ចូល branch `Dev`។
 
-[ចូលទៅកាន់គេហទំព័រ →](https://khmer-programming-words.vercel.app/)
+[ចូលទៅកាន់គេហទំព័រ →](https://khmercodingwords.masayashida.com/)
